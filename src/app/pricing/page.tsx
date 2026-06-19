@@ -44,12 +44,11 @@ export default function PricingPage() {
       <Nav />
       <main className="pricing">
         <div className="pricing__inner">
-          <h1 className="pricing__headline">
-            To learn more about our pricing,<br />
-            please fill out the form below and we will get in touch.
-          </h1>
-
           <div className="pricing__card">
+            <h1 className="pricing__headline">
+              To learn more about our pricing,<br />
+              please fill out the form below and we will get in touch.
+            </h1>
             {status === 'success' ? (
               <div style={{ padding: '40px 0' }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-mid)', marginBottom: 12 }}>Received</p>
