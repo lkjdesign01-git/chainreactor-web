@@ -414,17 +414,17 @@ ul { list-style: none; }
 /* ─── PRICING ────────────────────────────────────────────── */
 .pricing { min-height: 100vh; background: #F6F6F6; padding-top: var(--nav-h); }
 .pricing__inner { max-width: 1000px; margin: 0 auto; padding: 72px 40px 120px; }
-.pricing__headline { font-family: var(--font-mori); font-size: clamp(20px, 2vw, 28px); font-weight: 400; line-height: 1.35; letter-spacing: -0.01em; color: var(--black); margin-bottom: 40px; }
+.pricing__headline { font-family: var(--font-mori); font-size: clamp(20px, 2vw, 28px); font-weight: 400; line-height: 1.35; letter-spacing: -0.02em; color: var(--black); margin-bottom: 40px; }
 .pricing__card { background: var(--white); border-radius: 16px; padding: 0 48px 8px; }
 
 /* Form rows — two-column: label | fields */
 .pf-row { display: grid; grid-template-columns: 280px 1fr; gap: 32px; padding: 36px 0; border-bottom: 1px solid #E8E8E8; align-items: start; }
-.pf-section-label { font-family: var(--font-mori); font-size: 17px; font-weight: 400; color: var(--black); padding-top: 10px; }
+.pf-section-label { font-family: var(--font-mori); font-size: 17px; font-weight: 400; letter-spacing: -0.02em; color: var(--black); padding-top: 10px; }
 .pf-fields { display: flex; flex-direction: column; gap: 10px; }
-.pf-input { width: 100%; font-family: var(--font-mori); font-size: 15px; color: var(--black); background: var(--white); border: 1px solid #E0E0E0; border-radius: 8px; padding: 12px 16px; outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
+.pf-input { width: 100%; font-family: var(--font-mori); font-size: 15px; letter-spacing: -0.02em; color: var(--black); background: var(--white); border: 1px solid #E0E0E0; border-radius: 8px; padding: 12px 16px; outline: none; transition: border-color 0.2s; -webkit-appearance: none; }
 .pf-input::placeholder { color: rgba(30,30,30,0.35); }
 .pf-input:focus { border-color: #aaa; }
-.pf-option { display: flex; align-items: center; gap: 12px; font-family: var(--font-mori); font-size: 16px; color: var(--black); cursor: pointer; padding: 4px 0; }
+.pf-option { display: flex; align-items: center; gap: 12px; font-family: var(--font-mori); font-size: 16px; letter-spacing: -0.02em; color: var(--black); cursor: pointer; padding: 4px 0; }
 .pf-option input[type="radio"], .pf-option input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid #C0C0C0; background: var(--white); flex-shrink: 0; cursor: pointer; transition: background 0.15s, border-color 0.15s; }
 .pf-option input[type="radio"]:checked, .pf-option input[type="checkbox"]:checked { background: var(--black); border-color: var(--black); }
 .pf-textarea { width: 100%; font-family: var(--font-mori); font-size: 15px; color: var(--black); background: var(--white); border: 1px solid #E0E0E0; border-radius: 8px; padding: 12px 16px; outline: none; resize: vertical; min-height: 100px; line-height: 1.6; }
