@@ -119,16 +119,19 @@ export default function PricingPage() {
                   </div>
                 </div>
 
-                {/* Optional hardware/support requirements */}
+                {/* Special hardware requirements */}
                 <div className="pf-row">
-                  <p className="pf-section-label">Optional hardware/support requirements</p>
+                  <p className="pf-section-label">Special hardware requirements</p>
                   <div className="pf-fields">
                     {[
                       'No special requirements',
-                      'Custom vessel geometry',
-                      'GMP-compatible materials',
-                      'Containment / biosafety requirements',
-                      'Lab automation integration',
+                      'Agitation speed',
+                      'Aeration delivery (sparger, headplate)',
+                      'Vessel material',
+                      'Fluid addition number of ports',
+                      'Number of air filter or exhaust filter housing',
+                      'Impeller types',
+                      'Other (specify in additional comments)',
                     ].map(opt => (
                       <label className="pf-option" key={opt}>
                         <input type="checkbox" name="hardware" value={opt} />
@@ -146,11 +149,18 @@ export default function PricingPage() {
                       className="pf-textarea"
                       name="comments"
                       rows={4}
-                      placeholder="Any additional context about your process, timeline, or requirements…"
+                      placeholder="Type here..."
                     />
-                    <label className="pf-option" style={{ marginTop: 16 }}>
+                  </div>
+                </div>
+
+                {/* Privacy */}
+                <div className="pf-row">
+                  <p className="pf-privacy-note">All information will be treated confidentially. We use the data only to process your request and do not pass them on to third parties.</p>
+                  <div className="pf-fields">
+                    <label className="pf-option">
                       <input type="checkbox" name="terms" required />
-                      <span>I confirm I accept Terms and Privacy Policy</span>
+                      <span>I hereby accept the privacy policy.</span>
                     </label>
                   </div>
                 </div>
