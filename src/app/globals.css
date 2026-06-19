@@ -174,14 +174,12 @@ ul { list-style: none; }
 
 /* ─── SCALE ──────────────────────────────────────────────── */
 .scale { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.scale__bg { position: absolute; inset: 0; }
-.scale__bg img { width: 100%; height: 100%; object-fit: cover; }
+.scale__bg { position: absolute; inset: -40px; }
+.scale__bg img { width: 100%; height: 100%; object-fit: cover; filter: blur(40px); transform: scale(1.1); }
 .scale__glass {
   position: relative; z-index: 1;
   margin: 48px;
   background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
   border: 1px solid rgba(255,255,255,0.35);
   border-radius: 16px;
   width: 100%;
@@ -257,14 +255,12 @@ ul { list-style: none; }
 
 /* ─── KEY FEATURES ───────────────────────────────────────── */
 .features { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.features__bg { position: absolute; inset: 0; z-index: 0; }
-.features__bg img { width: 100%; height: 100%; object-fit: cover; }
+.features__bg { position: absolute; inset: -40px; z-index: 0; }
+.features__bg img { width: 100%; height: 100%; object-fit: cover; filter: blur(40px); transform: scale(1.1); }
 .features__glass {
   position: relative; z-index: 1;
   margin: 48px;
   background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 16px;
   width: 100%; max-width: 1280px;
@@ -317,15 +313,13 @@ ul { list-style: none; }
 
 /* ─── CTA WAVE ───────────────────────────────────────────── */
 .cta-wave { position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; }
-.cta-wave__bg { position: absolute; inset: 0; }
-.cta-wave__bg img { width: 100%; height: 100%; object-fit: cover; }
+.cta-wave__bg { position: absolute; inset: -40px; }
+.cta-wave__bg img { width: 100%; height: 100%; object-fit: cover; filter: blur(40px); transform: scale(1.1); }
 .cta-wave__glass {
   position: relative; z-index: 1;
   margin: 0 40px 40px;
   width: calc(100% - 80px);
   background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 16px;
   padding: 48px 56px;
