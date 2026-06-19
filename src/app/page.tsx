@@ -6,16 +6,7 @@ import Footer from '@/components/Footer'
 import Carousel from '@/components/Carousel'
 import { useReveal } from '@/lib/useReveal'
 
-const tickerItems = [
-  { stat: '3', label: 'Inter-Modules' },
-  { stat: '0', label: 'U-Components' },
-  { stat: '$1.99', label: 'Compliance Cost' },
-  { stat: '100%', label: 'Scale Fidelity' },
-  { stat: '72hr', label: 'Setup Time' },
-  { stat: '10L', label: 'Max Volume' },
-  { stat: '±0.1°C', label: 'Temp Control' },
-  { stat: '1000×', label: 'Scale Factor' },
-]
+const tickerItems = ['SHIPPING NOW', '2 PATENT FAMILIES FILED', 'EU / UK / US DEPLOYMENTS']
 
 export default function Home() {
   useReveal()
@@ -34,8 +25,9 @@ export default function Home() {
           <Image src="/Logo.svg" alt="Chainreactor" width={260} height={60} priority />
         </div>
         <div className="hero__content">
-          <p className="hero__tag">Chainreactor — Bioprocess Scale-Up</p>
-          <h1 className="hero__headline">The flight simulator<br />for biology.</h1>
+          <p className="hero__tag">CHAINREACTOR</p>
+          <h1 className="hero__headline">The flight simulator for biology</h1>
+          <p className="hero__sub">Chainreactors pressurizable bioreactors combine physical AI, process engineering and patented 3D-printing.</p>
         </div>
       </section>
 
@@ -48,47 +40,54 @@ export default function Home() {
           </p>
           <div className="boarding__cols">
             <div className="boarding__col reveal">
-              <p className="boarding__col-label">01 — The Journey</p>
+              <p className="boarding__col-label">01</p>
               <h3 className="boarding__col-title">The Journey</h3>
-              <p className="boarding__col-body">Moving to a commercial facility requires a 1,000x increase in volume. At that scale, cells behave very differently.</p>
+              <p className="boarding__col-body">Moving to a commercial facility requires a <strong>1,000x increase</strong> in volume. At that scale, cells behave very differently.</p>
             </div>
             <div className="boarding__col reveal reveal-delay-1">
-              <p className="boarding__col-label">02 — The Turbulence</p>
-              <h3 className="boarding__col-title">The Turbulence</h3>
-              <p className="boarding__col-body">Oxygen gradients, shear stress, pH fluctuations — variables that don&apos;t exist at lab scale appear suddenly and catastrophically.</p>
+              <p className="boarding__col-label">02</p>
+              <h3 className="boarding__col-title">The Turbulance</h3>
+              <p className="boarding__col-body">Mixing time stretches from a perfect 5 seconds in the lab to a stagnant <strong>60–120 seconds</strong> in a giant tank.</p>
             </div>
             <div className="boarding__col reveal reveal-delay-2">
-              <p className="boarding__col-label">03 — The Crash</p>
+              <p className="boarding__col-label">03</p>
               <h3 className="boarding__col-title">The Crash</h3>
-              <p className="boarding__col-body">Most bioprocesses fail during scale-up. Years of R&amp;D, millions in capex — gone. The industry accepts this. We don&apos;t.</p>
+              <p className="boarding__col-body">Localized physical stress starves and suffocates cells — yields plummet by <strong>20% to 70%.</strong></p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SCALE */}
+      {/* MICROENVIRONMENT */}
       <section className="scale">
+        <p className="scale__section-label">MICROENVIRONMENT</p>
         <div className="scale__inner">
           <div className="scale__col reveal">
-            <p className="scale__label">Lab Scale</p>
             <div className="scale__illustration">
               <Image src="/images/Lab Scale.svg" alt="Lab Scale illustration" width={104} height={163} style={{ height: '180px', width: 'auto' }} />
             </div>
             <h3 className="scale__title">Lab Scale</h3>
-            <p className="scale__body">A single bioreactor. Controlled, predictable, fully characterised at benchtop.</p>
+            <p className="scale__stat">5 SECONDS</p>
+            <p className="scale__stat-sub">UNIFORM</p>
           </div>
           <div className="scale__col reveal reveal-delay-1">
-            <p className="scale__label">Commercial Scale</p>
             <div className="scale__illustration">
               <Image src="/images/Commercial Scale.svg" alt="Commercial Scale illustration" width={237} height={332} style={{ height: '220px', width: 'auto' }} />
             </div>
             <h3 className="scale__title">Commercial Scale</h3>
-            <p className="scale__body">Hundreds of modules. New physics. New failure modes. A completely different physical world.</p>
+            <p className="scale__stat">60-120 SECONDS</p>
+            <p className="scale__stat-sub">GRADIENTS</p>
           </div>
           <div className="scale__divider" />
-          <p className="scale__footer reveal">
-            <strong>The same rules don&apos;t apply.</strong> A completely different physical world — and nobody has been preparing you for it. Until now.
-          </p>
+          <div className="scale__footer reveal">
+            <div className="scale__footer-left">
+              <p>The same cells in the same media. <strong>A completely different physical world.</strong></p>
+            </div>
+            <div className="scale__footer-right">
+              <p>$4B of capital has been lost to that failure to scale.</p>
+              <p>Chainreactor is the flight simulator for biotech: hardware and software that lets you design, predict and test before you scale, saving millions in R&D.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -98,32 +97,32 @@ export default function Home() {
           <Image src="/images/image 2045.jpg" alt="Chainreactor benchtop bioreactor" fill style={{ objectFit: 'cover' }} />
         </div>
         <div className="product__content">
-          <p className="product__tag reveal">01 — Benchtop Module</p>
-          <h2 className="product__headline reveal reveal-delay-1">Our 3D-printed modular benchtop faithfully replicates large-scale physics. The environment behaves just like the plant.</h2>
-          <p className="product__body reveal reveal-delay-2">Every fluid dynamic, every mass transfer coefficient, every oxygen gradient — simulated at lab scale so you can de-risk scale-up before you commit.</p>
-          <p className="product__spec reveal reveal-delay-3">CR-01 Benchtop Module — 2L working volume</p>
+          <h2 className="product__headline reveal">Our 3D printed modular benchtop bioreactors replicate industrial scale physics. The bench behaves just like the plant.</h2>
         </div>
       </section>
 
-      {/* PRODUCT: Desktop full-width */}
-      <section className="product product--full">
-        <div className="product__image">
-          <Image src="/images/Group 33.jpg" alt="Chainreactor large biological desktop" fill style={{ objectFit: 'cover' }} />
+      {/* PRODUCT: Large Biological Model */}
+      <section className="product product--lbm">
+        <div className="product__lbm-visual">
+          <div className="lbm__ring">
+            <span className="lbm__point lbm__point--top"><span className="lbm__num">01</span>More customers</span>
+            <span className="lbm__point lbm__point--right"><span className="lbm__num">02</span>More runs</span>
+            <span className="lbm__point lbm__point--br"><span className="lbm__num">03</span>More high-quality data</span>
+            <span className="lbm__point lbm__point--bl"><span className="lbm__num">04</span>Better predictions</span>
+            <span className="lbm__point lbm__point--left"><span className="lbm__num">05</span>Better outcomes</span>
+          </div>
         </div>
         <div className="product__content">
-          <p className="product__tag reveal">02 — Desktop System</p>
-          <h2 className="product__headline reveal reveal-delay-1">Our large biological desktop provides the exact same environment as a commercial bioreactor. Total scale simulation at 10L.</h2>
-          <p className="product__body reveal reveal-delay-2">True scale-up confidence, delivered at desktop footprint. No surprises when you reach the plant.</p>
+          <h2 className="product__headline reveal">Our Large Biological Model predicts the exact cell journey inside a commercial facility on a computer.</h2>
+          <p className="product__body reveal reveal-delay-1">Test at small scale, know at full scale.</p>
         </div>
       </section>
 
       {/* STATS TICKER */}
       <div className="ticker" aria-hidden="true">
         <div className="ticker__track">
-          {[...tickerItems, ...tickerItems].map((item, i) => (
-            <div className="ticker__item" key={i}>
-              <strong>{item.stat}</strong> {item.label}
-            </div>
+          {[...tickerItems, ...tickerItems, ...tickerItems].map((item, i) => (
+            <div className="ticker__item" key={i}>{item}</div>
           ))}
         </div>
       </div>
@@ -131,62 +130,65 @@ export default function Home() {
       {/* MATERIALS CAROUSEL */}
       <Carousel />
 
-      {/* SPECS */}
-      <section className="specs">
-        <div className="specs__bg">
-          <Image src="/images/BG Image 02.jpg" alt="" fill style={{ objectFit: 'cover' }} aria-hidden />
+      {/* KEY FEATURES */}
+      <section className="features">
+        <div className="features__bg">
+          <Image src="/images/BG Image 03.jpg" alt="" fill style={{ objectFit: 'cover' }} aria-hidden />
         </div>
-        <div className="specs__overlay" />
-        <div className="specs__inner">
-          <h2 className="specs__headline reveal">Built for the rigour of commercial bioprocessing.</h2>
-          <table className="specs__table reveal reveal-delay-1">
-            <thead>
-              <tr>
-                <th>Specification</th>
-                <th>Benchtop CR-01</th>
-                <th>Desktop CR-02</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ['Working Volume', '0.5 – 2L', '2 – 10L'],
-                ['Temperature Control', '±0.1°C', '±0.05°C'],
-                ['Dissolved Oxygen', '0 – 100% sat.', '0 – 100% sat.'],
-                ['pH Range', '4.0 – 9.0', '4.0 – 9.0'],
-                ['Agitation', '50 – 1200 RPM', '10 – 800 RPM'],
-                ['Scale Simulation Fidelity', 'Commercial scale', 'Industrial scale'],
-                ['Footprint', 'Benchtop (0.5m²)', 'Desktop (1.2m²)'],
-              ].map(([spec, a, b]) => (
-                <tr key={spec}>
-                  <td>{spec}</td>
-                  <td>{a}</td>
-                  <td>{b}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="features__overlay" />
+        <div className="features__inner reveal">
+          <p className="features__label">KEY FEATURES</p>
+          <div className="features__row">
+            <p className="features__num">01</p>
+            <p className="features__name">OUR REACTORS</p>
+            <ul className="features__list">
+              <li>2 – 2000 liters</li>
+              <li>One easy subscription</li>
+              <li>Desktop / Cloud Control / Scriptable / Iterative</li>
+            </ul>
+          </div>
+          <div className="features__row">
+            <p className="features__num">02</p>
+            <p className="features__name">VESSELS</p>
+            <ul className="features__list">
+              <li>Polymer vessel sizes from 250ml to 2k liters</li>
+              <li>Stirred tank, Airlift and Perfusion Bioreactors</li>
+              <li>Machine vision soft sensors</li>
+            </ul>
+          </div>
+          <div className="features__row">
+            <p className="features__num">03</p>
+            <p className="features__name">CONTROL SYSTEM</p>
+            <ul className="features__list">
+              <li>Peristaltic pumps</li>
+              <li>Cascade control</li>
+              <li>Heating and cooling system included</li>
+              <li>Standard sensors: PH, DO, Temperature</li>
+              <li>Agitation Control</li>
+              <li>Touchscreen Interface</li>
+              <li>Fully scriptable processes</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       {/* COMPARISON */}
       <section className="comparison">
+        <div className="comparison__image">
+          <Image src="/images/Group 33.jpg" alt="Chainreactor bioreactor system" fill style={{ objectFit: 'cover' }} />
+        </div>
         <div className="comparison__inner">
           <h2 className="comparison__headline reveal">Print the vessel.<br />Skip the wait.<br />Land safely.</h2>
-          <p className="comparison__sub reveal reveal-delay-1">Stop paying the scale-up tax. Chainreactor replaces the guesswork.</p>
-          <div className="comparison__grid reveal reveal-delay-2">
-            <div className="comparison__header-cell" />
+          <div className="comparison__grid reveal reveal-delay-1">
             <div className="comparison__header-cell">Legacy Hardware</div>
-            <div className="comparison__header-cell active">Chainreactor</div>
+            <div className="comparison__header-cell active">CHAINREACTOR</div>
             {[
-              ['Scale fidelity', 'Approximated', <><span className="check">✓</span> True simulation</>],
-              ['Setup time', '6–12 weeks', '72 hours'],
-              ['Cost of batch failure', '$500k–$5M', 'Predictable'],
-              ['Custom vessel geometries', <><span className="cross">✕</span></>, <><span className="check">✓</span> 3D-printed to spec</>],
-              ['Compliance-ready data', 'Manual exports', 'Automated reporting'],
-              ['Physical footprint', 'Large / pilot plant', 'Benchtop / desktop'],
-            ].map(([label, legacy, cr], i) => (
+              ['12–24 month lead times', 'Days to deployment'],
+              ['Fixed geometry', 'Fully custom'],
+              ['Supply chain dependency', 'Printed locally'],
+              ['Revalidation at scale', 'Geometry continuity'],
+            ].map(([legacy, cr], i) => (
               <>
-                <div className="comparison__label" key={`label-${i}`}>{label}</div>
                 <div className="comparison__cell" key={`legacy-${i}`}>{legacy}</div>
                 <div className="comparison__cell active" key={`cr-${i}`}>{cr}</div>
               </>
@@ -197,11 +199,12 @@ export default function Home() {
 
       {/* LOGOS */}
       <section className="logos">
-        <p className="logos__label reveal">Backed by &amp; working with</p>
+        <p className="logos__label reveal">BACKED BY:</p>
         <div className="logos__grid">
-          {['⬡ Founders Circle', '▲ OceanDown', '◈ CENTI', '✦ Positive Renewables', '⬢ ProFab'].map((name, i) => (
-            <span className={`logos__grid-item reveal reveal-delay-${i}`} key={name}>{name}</span>
-          ))}
+          <span className="logos__grid-item reveal">Técnico Lisboa</span>
+          <span className="logos__grid-item reveal reveal-delay-1">newdawn</span>
+          <span className="logos__grid-item reveal reveal-delay-2">centi</span>
+          <span className="logos__grid-item reveal reveal-delay-3">Positive Ma+terials</span>
         </div>
       </section>
 
@@ -212,19 +215,11 @@ export default function Home() {
         </div>
         <div className="cta-wave__overlay" />
         <div className="cta-wave__content">
-          <p className="cta-wave__eyebrow reveal">The future of bioprocessing</p>
-          <h2 className="cta-wave__headline reveal reveal-delay-1">Building the future as one cycle.<br />For the first time, completely.</h2>
-          <Link href="/pricing" className="cta-wave__btn reveal reveal-delay-2">Book a demo →</Link>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="final-cta">
-        <div className="final-cta__inner">
-          <h2 className="final-cta__headline reveal">Ready to de-risk your scale-up?</h2>
-          <div className="final-cta__right">
-            <p className="final-cta__body reveal reveal-delay-1">Tell us about your process and we&apos;ll show you exactly how Chainreactor fits in — no commitment required.</p>
-            <Link href="/pricing" className="final-cta__btn reveal reveal-delay-2">Get in touch →</Link>
+          <h2 className="cta-wave__headline reveal">Building the picks and shovels for the biotech revolution.</h2>
+          <div className="cta-wave__right">
+            <p className="cta-wave__body reveal reveal-delay-1">Based in Lisbon, Portugal, our founding team has extensive experience in biotechnology and additive manufacturing, and includes the founders of two successful startups.</p>
+            <p className="cta-wave__body reveal reveal-delay-2">Blending hands-on production capabilities and advanced automation skills, we&apos;re driven by the determination to help solve some of humanity&apos;s most complex problems. One bioreactor at a time.</p>
+            <Link href="/pricing" className="cta-wave__btn reveal reveal-delay-3">BECOME AN EARLY ADOPTER</Link>
           </div>
         </div>
       </section>

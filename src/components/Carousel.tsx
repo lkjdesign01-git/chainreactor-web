@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 const slides = [
-  { src: '/images/Carousel Image 01.jpg', alt: 'Material sample 1' },
-  { src: '/images/Carousel Image 02.jpg', alt: 'Material sample 2' },
-  { src: '/images/Carousel Image 03.jpg', alt: 'Material sample 3' },
-  { src: '/images/Carousel Image 04.jpg', alt: 'Material sample 4' },
+  { src: '/images/Carousel Image 01.jpg', alt: 'Pharmaceuticals', label: 'PHARMACEUTICALS' },
+  { src: '/images/Carousel Image 02.jpg', alt: 'Pharmaceuticals', label: 'PHARMACEUTICALS' },
+  { src: '/images/Carousel Image 03.jpg', alt: 'Fabric', label: 'FABRIC' },
+  { src: '/images/Carousel Image 04.jpg', alt: 'Cosmetics', label: 'COSMETICS' },
 ]
 
 export default function Carousel() {
@@ -33,10 +33,9 @@ export default function Carousel() {
   const resume = () => { autoRef.current = setInterval(() => goTo(current + 1), 4000) }
 
   return (
-    <div className="materials" id="materials">
+    <section className="materials" id="materials">
       <div className="materials__header">
-        <p className="materials__eyebrow reveal">Materials</p>
-        <h2 className="materials__headline reveal reveal-delay-1">
+        <h2 className="materials__headline reveal">
           Materials made by biology.<br />
           <em>Powered by Chainreactor.</em>
         </h2>
@@ -47,6 +46,7 @@ export default function Carousel() {
           {slides.map((s) => (
             <div className="carousel__slide" key={s.src}>
               <Image src={s.src} alt={s.alt} fill style={{ objectFit: 'cover' }} />
+              <span className="carousel__label">{s.label}</span>
             </div>
           ))}
         </div>
@@ -56,6 +56,6 @@ export default function Carousel() {
         <button className="carousel__btn" onClick={() => goTo(current - 1)} aria-label="Previous">←</button>
         <button className="carousel__btn" onClick={() => goTo(current + 1)} aria-label="Next">→</button>
       </div>
-    </div>
+    </section>
   )
 }

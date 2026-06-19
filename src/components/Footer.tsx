@@ -4,46 +4,26 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__top">
-        <div>
-          <div className="footer__logo">
-            <Image src="/Logo.svg" alt="Chainreactor" width={120} height={20} />
-          </div>
-          <p className="footer__tagline">The flight simulator for biology. De-risk your bioprocess scale-up.</p>
+      <div className="footer__inner">
+        <div className="footer__logo-col">
+          <Image src="/Logo.svg" alt="Chainreactor" width={140} height={24} />
         </div>
-        <div>
-          <p className="footer__col-title">Product</p>
-          <ul className="footer__links">
-            <li><Link href="/#technology">Technology</Link></li>
-            <li><Link href="/#product">CR-01 Benchtop</Link></li>
-            <li><Link href="/#product">CR-02 Desktop</Link></li>
-            <li><Link href="/#materials">Materials</Link></li>
-          </ul>
+        <div className="footer__nav-col">
+          <Link href="/pricing" className="footer__link">PRICING</Link>
+          <Link href="mailto:info@chainreactor.bio" className="footer__link">CONTACT US</Link>
         </div>
-        <div>
-          <p className="footer__col-title">Company</p>
-          <ul className="footer__links">
-            <li><Link href="#">About</Link></li>
-            <li><Link href="#">Careers</Link></li>
-            <li><Link href="#">Press</Link></li>
-          </ul>
-        </div>
-        <div>
-          <p className="footer__col-title">Contact</p>
-          <ul className="footer__links">
-            <li><Link href="/pricing">Get Pricing</Link></li>
-            <li><Link href="/manual">Manual</Link></li>
-            <li><a href="mailto:hello@chainreactor.bio">hello@chainreactor.bio</a></li>
-          </ul>
+        <div className="footer__contact-col">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer__link">LINKEDIN</a>
+          <a href="mailto:info@chainreactor.bio" className="footer__link">INFO@CHAINREACTOR.BIO</a>
         </div>
       </div>
       <div className="footer__bottom">
-        <p className="footer__copy">© {new Date().getFullYear()} Chainreactor. All rights reserved.</p>
-        <nav className="footer__bottom-links">
-          <Link href="#">Privacy</Link>
-          <Link href="#">Terms</Link>
-          <Link href="#">Legal</Link>
-        </nav>
+        <p className="footer__copy">© 2026 CHAINREACTOR</p>
+        <div className="footer__legal">
+          <Link href="#">TERMS &amp; CONDITIONS</Link>
+          <Link href="#">PRIVACY POLICY</Link>
+        </div>
+        <p className="footer__location">LISBON, PORTUGAL</p>
       </div>
     </footer>
   )
