@@ -179,7 +179,7 @@ ul { list-style: none; }
 .scale__glass {
   position: relative; z-index: 1;
   margin: 48px;
-  background: rgba(190,200,210,0.38);
+  background: rgba(0,0,0,0.35);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
   border: 1px solid rgba(255,255,255,0.35);
@@ -262,7 +262,7 @@ ul { list-style: none; }
 .features__glass {
   position: relative; z-index: 1;
   margin: 48px;
-  background: rgba(190,200,210,0.38);
+  background: rgba(0,0,0,0.35);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
   border: 1px solid rgba(255,255,255,0.18);
@@ -323,7 +323,7 @@ ul { list-style: none; }
   position: relative; z-index: 1;
   margin: 0 40px 40px;
   width: calc(100% - 80px);
-  background: rgba(190,200,210,0.38);
+  background: rgba(0,0,0,0.35);
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
   border: 1px solid rgba(255,255,255,0.18);
