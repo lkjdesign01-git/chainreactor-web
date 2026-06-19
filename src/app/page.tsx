@@ -199,12 +199,13 @@ export default function Home() {
 
       {/* LOGOS */}
       <section className="logos">
-        <p className="logos__label reveal">BACKED BY:</p>
-        <div className="logos__grid">
-          <span className="logos__grid-item reveal">Técnico Lisboa</span>
-          <span className="logos__grid-item reveal reveal-delay-1">newdawn</span>
-          <span className="logos__grid-item reveal reveal-delay-2">centi</span>
-          <span className="logos__grid-item reveal reveal-delay-3">Positive Ma+terials</span>
+        <p className="logos__label">BACKED BY:</p>
+        <div className="logos__marquee" aria-hidden="true">
+          <div className="logos__track">
+            {[1,2,3,4,1,2,3,4].map((n, i) => (
+              <img key={i} src={`/images/logo-${n}.svg`} alt={`Partner logo ${n}`} className="logos__logo" />
+            ))}
+          </div>
         </div>
       </section>
 

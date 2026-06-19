@@ -271,11 +271,13 @@ ul { list-style: none; }
 .comparison__cell.active { background: rgba(255,255,255,0.6); color: var(--text-dark); text-align: center; }
 
 /* ─── LOGOS ──────────────────────────────────────────────── */
-.logos { background: var(--white); padding: 60px; border-top: 1px solid var(--light-grey); }
-.logos__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 32px; text-align: center; }
-.logos__grid { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
-.logos__grid-item { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(30,30,30,0.45); display: flex; align-items: center; gap: 8px; transition: color 0.25s; }
-.logos__grid-item:hover { color: var(--text-dark); }
+.logos { background: var(--white); padding: 60px 60px 48px; border-top: 1px solid var(--light-grey); overflow: hidden; }
+.logos__label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-mid); margin-bottom: 32px; }
+.logos__marquee { overflow: hidden; }
+.logos__track { display: flex; align-items: center; gap: 80px; width: max-content; animation: logos-scroll 18s linear infinite; }
+.logos__logo { height: 28px; width: auto; opacity: 0.5; transition: opacity 0.25s; flex-shrink: 0; }
+.logos__logo:hover { opacity: 1; }
+@keyframes logos-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ─── CTA WAVE ───────────────────────────────────────────── */
 .cta-wave { position: relative; min-height: 600px; display: flex; align-items: flex-end; overflow: hidden; background: var(--black); }
