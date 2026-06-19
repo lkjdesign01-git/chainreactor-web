@@ -18,10 +18,8 @@ export default function Nav() {
         <Image src="/Logo.svg" alt="Chainreactor" width={140} height={22} priority />
       </Link>
       <ul className="nav__links">
-        <li><Link href="/#technology">Technology</Link></li>
-        <li><Link href="/#product">Product</Link></li>
-        <li><Link href="/#materials">Materials</Link></li>
-        <li><Link href="/pricing" className="nav__cta">Get Pricing</Link></li>
+        <li><Link href="/pricing">Pricing</Link></li>
+        <li><Link href="mailto:hello@chainreactor.bio">Contact Us</Link></li>
       </ul>
     </nav>
   )

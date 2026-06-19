@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Carousel from '@/components/Carousel'
-import { LabDots, CommercialDots } from '@/components/ScaleDots'
 import { useReveal } from '@/lib/useReveal'
 
 const tickerItems = [
@@ -72,13 +71,17 @@ export default function Home() {
         <div className="scale__inner">
           <div className="scale__col reveal">
             <p className="scale__label">Lab Scale</p>
-            <LabDots />
+            <div className="scale__illustration">
+              <Image src="/images/Lab Scale.svg" alt="Lab Scale illustration" width={104} height={163} style={{ height: '180px', width: 'auto' }} />
+            </div>
             <h3 className="scale__title">Lab Scale</h3>
             <p className="scale__body">A single bioreactor. Controlled, predictable, fully characterised at benchtop.</p>
           </div>
           <div className="scale__col reveal reveal-delay-1">
             <p className="scale__label">Commercial Scale</p>
-            <CommercialDots />
+            <div className="scale__illustration">
+              <Image src="/images/Commercial Scale.svg" alt="Commercial Scale illustration" width={237} height={332} style={{ height: '220px', width: 'auto' }} />
+            </div>
             <h3 className="scale__title">Commercial Scale</h3>
             <p className="scale__body">Hundreds of modules. New physics. New failure modes. A completely different physical world.</p>
           </div>
