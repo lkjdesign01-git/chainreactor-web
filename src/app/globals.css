@@ -214,43 +214,40 @@ ul { list-style: none; }
 .scale__footer-right { display: flex; flex-direction: column; gap: 16px; font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.45); }
 
 /* ─── PRODUCT ────────────────────────────────────────────── */
-.product {
-  display: flex;
-  background: var(--white);
-}
-.product__image-col {
+/* ─── PRODUCTS (sticky scroll) ───────────────────────────── */
+.products { display: flex; background: var(--white); }
+
+.products__sticky {
   width: 50%; flex-shrink: 0;
-  padding: 28px;
-  display: flex; align-items: stretch;
   position: sticky; top: 0;
   height: 100vh;
+  padding: 28px;
   align-self: flex-start;
 }
-.product__image {
-  position: relative;
-  width: 100%; flex: 1;
+.products__img {
+  position: absolute;
+  inset: 28px;
   border-radius: 16px;
   overflow: hidden;
-  min-height: 500px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-.product__image--dark { background: #0d0d0d; display: flex; align-items: center; justify-content: center; }
-.lbm__svg { width: 90%; height: auto; max-width: 480px; }
-.product__content {
-  width: 50%;
-  padding: 80px 64px;
-  display: flex; flex-direction: column; justify-content: center;
+.products__img--active { opacity: 1; }
+.products__img--dark { background: #0d0d0d; display: flex; align-items: center; justify-content: center; }
+
+.products__panels { width: 50%; }
+.products__panel {
   min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 64px;
 }
+
 .product__headline {
   font-size: clamp(20px,2vw,32px); font-weight: 400; line-height: 1.25;
   letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 24px;
 }
 .product__body { font-size: 16px; line-height: 1.65; color: var(--text-mid); }
-
-.product--lbm { background: var(--white); }
-.product--lbm .product__content { color: var(--text-dark); }
-.product--lbm .product__headline { color: var(--text-dark); }
-.product--lbm .product__body { color: var(--text-mid); }
+.lbm__svg { width: 90%; height: auto; max-width: 480px; }
 
 /* ─── TICKER ─────────────────────────────────────────────── */
 .ticker { background: var(--off-white); border-top: 1px solid var(--light-grey); border-bottom: 1px solid var(--light-grey); padding: 16px 0; overflow: hidden; }

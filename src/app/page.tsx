@@ -5,6 +5,49 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import Carousel from '@/components/Carousel'
 import { useReveal } from '@/lib/useReveal'
+import { useEffect, useRef, useState } from 'react'
+
+function ProductScroll() {
+  const [active, setActive] = useState(0)
+  const panelRefs = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)]
+
+  useEffect(() => {
+    const observers = panelRefs.map((ref, i) => {
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActive(i) },
+        { threshold: 0.5 }
+      )
+      if (ref.current) obs.observe(ref.current)
+      return obs
+    })
+    return () => observers.forEach(o => o.disconnect())
+  }, [])
+
+  return (
+    <section className="products" id="product">
+      {/* Sticky left */}
+      <div className="products__sticky">
+        <div className={`products__img products__img--photo ${active === 0 ? 'products__img--active' : ''}`}>
+          <Image src="/images/image 2045.jpg" alt="Chainreactor benchtop bioreactor" fill style={{ objectFit: 'cover' }} />
+        </div>
+        <div className={`products__img products__img--dark ${active === 1 ? 'products__img--active' : ''}`}>
+          <LBMDiagram />
+        </div>
+      </div>
+
+      {/* Scrolling right panels */}
+      <div className="products__panels">
+        <div className="products__panel" ref={panelRefs[0]}>
+          <h2 className="product__headline">Our 3D printed modular benchtop bioreactors replicate industrial scale physics. The bench behaves just like the plant.</h2>
+        </div>
+        <div className="products__panel" ref={panelRefs[1]}>
+          <h2 className="product__headline">Our Large Biological Model predicts the exact cell journey inside a commercial facility on a computer.</h2>
+          <p className="product__body" style={{ marginTop: 24 }}>Test at small scale, know at full scale.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 const tickerItems = ['SHIPPING NOW', '——', '2 PATENT FAMILIES FILED', '——', 'EU / UK / US DEPLOYMENTS', '——']
 
@@ -148,30 +191,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRODUCT: Benchtop */}
-      <section className="product" id="product">
-        <div className="product__image-col">
-          <div className="product__image">
-            <Image src="/images/image 2045.jpg" alt="Chainreactor benchtop bioreactor" fill style={{ objectFit: 'cover' }} />
-          </div>
-        </div>
-        <div className="product__content">
-          <h2 className="product__headline reveal">Our 3D printed modular benchtop bioreactors replicate industrial scale physics. The bench behaves just like the plant.</h2>
-        </div>
-      </section>
-
-      {/* PRODUCT: Large Biological Model */}
-      <section className="product product--lbm">
-        <div className="product__image-col">
-          <div className="product__image product__image--dark">
-            <LBMDiagram />
-          </div>
-        </div>
-        <div className="product__content">
-          <h2 className="product__headline reveal">Our Large Biological Model predicts the exact cell journey inside a commercial facility on a computer.</h2>
-          <p className="product__body reveal reveal-delay-1">Test at small scale, know at full scale.</p>
-        </div>
-      </section>
+      {/* PRODUCTS — sticky left image, scrolling right panels */}
+      <ProductScroll />
 
       {/* STATS TICKER */}
       <div className="ticker" aria-hidden="true">
